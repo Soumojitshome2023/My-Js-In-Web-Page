@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            border: 5px solid rgb(21, 255, 0);
+        }
+
+        section {
+            min-height: 30vh;
+            height: auto;
+            min-width: 30vw;
+            width: auto;
+            border: 5px solid red;
+            padding: 20px;
+
+
+        }
+
+        input {
+            margin: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+
+        Name: <input id="name" type="text" placeholder="name"><br>
+        Phone: <input id="phone" type="text" placeholder="phone"><br>
+        Email: <input id="email" type="text" placeholder="email"><br>
+        Message: <input id="message" type="text" placeholder="message"><br>
+
+
+    </section>
+</body>
+<script>
+
+    save("name");
+    save("phone");
+    save("email");
+    save("message");
+
+    function save(idv) {
+
+        if (localStorage.getItem(idv) != null) {
+
+            let b = document.getElementById(idv);
+            b.value = localStorage.getItem(idv);
+        }
+
+        setInterval(() => {
+
+            if (document.getElementById(idv).value != localStorage.getItem(idv)) {
+                
+                console.log("data update");
+
+                let a = document.getElementById(idv).value;
+                localStorage.setItem(idv, a);
+            }
+
+        }, 2000);
+
+    }
+
+
+
+</script>
+
+</html>

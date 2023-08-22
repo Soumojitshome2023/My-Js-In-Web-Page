@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div id="result"></div>
+
+    <script>
+        // example
+        // data avaible only on this page link
+
+        // localStorage.clear();   for clear localstorage data
+
+
+        // Check browser support
+        if (typeof (Storage) !== "undefined") {
+            // Store
+            if (localStorage.getItem("firstname") == null) {
+
+
+                let a = prompt("Enter name : ");
+
+                localStorage.setItem("firstname", a);
+            }
+
+            // Retrieve
+            document.getElementById("result").innerHTML = "Hi " + localStorage.getItem("firstname");
+        }
+
+
+        else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+        }
+    </script>
+
+</body>
+
+</html>

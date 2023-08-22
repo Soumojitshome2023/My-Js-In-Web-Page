@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            height: 100vh;
+            width: 100vw;
+            border: 5px solid red;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <section onclick="sub()">
+
+        Name: <input id="name" type="text" placeholder="name">
+
+
+    </section>
+</body>
+<script>
+
+
+    // function sub() {
+    //     if (localStorage.getItem("name") == null || document.getElementById("name").value != localStorage.getItem("name")) {
+
+    //         let a = document.getElementById("name").value;
+    //         localStorage.setItem("name", a)
+    //     }
+
+    // }
+    // let b = document.getElementById("name");
+    //         let c =localStorage.getItem("name");
+    //         b.value = c;
+
+
+    function sub() {
+        // console.log("ok");
+        
+        let a = document.getElementById("name").value;
+        localStorage.setItem("name", a);
+    }
+    
+    b = document.getElementById("name");
+    let c =localStorage.getItem("name");
+            b.value = c;
+
+
+</script>
+
+</html>

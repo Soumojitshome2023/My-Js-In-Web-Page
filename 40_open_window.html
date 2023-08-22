@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>The Window Object</h1>
+    <h2>The open() and close() Method</h2>
+
+    <button onclick="openWin()">Open w3schools.com in a new window</button>
+    <button onclick="closeWin()">Close the new window</button>
+
+    <script>
+        let myWindow;
+
+        function openWin() {
+            myWindow = window.open("https://www.w3schools.com", "_blank", "width=500, height=500");
+        }
+
+        function closeWin() {
+            myWindow.close();
+        }
+    </script>
+
+</body>
+
+</html>

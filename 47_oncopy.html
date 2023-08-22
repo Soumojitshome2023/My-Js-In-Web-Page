@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>HTML DOM Events</h1>
+    <h2>The oncopy Event</h2>
+
+    <input type="text" oncopy="myFunction()" value="Try to copy me">
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "You copied text!"
+        }
+    </script>
+
+</body>
+
+</html>

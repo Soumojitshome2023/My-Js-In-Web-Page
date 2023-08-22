@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>The Window Object</h1>
+    <h2>The self and top Properties</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        let text;
+        if (window.top != window.self) {
+            text = "This is not the topmost window! Am I in a frame?";
+        } else {
+            text = "This is the topmost window!";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+
+</body>
+
+</html>
